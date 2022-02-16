@@ -5,9 +5,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "link": "lerna link",
-    "build": "npm run clean && mkdirp build && webpack --mode=development --progress --colors --display=minimal",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider npm run clean && mkdirp build && webpack --mode=development --progress --colors --display=minimal",
     "build:esmodules": "tsc --project ./tsconfig.json --module esnext --outDir ./packages --importHelpers",
-    "build:min": "mkdirp build && cross-env MDC_ENV=production webpack -p --mode=production --progress --colors --display=minimal",
+    "build:min": "export NODE_OPTIONS=--openssl-legacy-provider mkdirp build && cross-env MDC_ENV=production webpack -p --mode=production --progress --colors --display=minimal",
     "clean": "node ./scripts/build/clean",
     "dist": "npm run build && npm run build:min && npm run build:esmodules",
     "docgen": "npm run clean && npm run build:esmodules && tsc ./scripts/documentation/tsdoc.ts --resolveJsonModule && node ./scripts/documentation/tsdoc.js",
