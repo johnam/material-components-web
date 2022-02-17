@@ -119,13 +119,13 @@
 // If you're a user customizing your color scheme in SASS, these are probably the only variables you need to change.
 //
 
-$primary: #6200ee !default; // baseline purple, 500 tone
+$primary: #90a4ae !default; // baseline purple, 500 tone
 $on-primary: if(contrast-tone($primary) == 'dark', #000, #fff) !default;
 
 // The $mdc-theme-accent variable is DEPRECATED - it exists purely for backward compatibility.
 // The $mdc-theme-secondary* variables should be used for all new projects.
 /// @deprecated - use $secondary
-$accent: #018786 !default; // baseline teal, 600 tone
+$accent: #3f51b5 !default; // baseline teal, 600 tone
 $secondary: $accent !default;
 $on-secondary: if(contrast-tone($secondary) == 'dark', #000, #fff) !default;
 $background: #fff !default; // White

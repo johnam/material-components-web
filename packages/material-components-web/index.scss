@@ -1,9 +1,3 @@
 // https://material.io/resources/color
 
-@use '@material/theme/mdc-theme' with (
-  $primary: #90a4ae,
-  $secondary: #3f51b5,
-  $background: #fff,
-);
-
 @use './material-components-web';
